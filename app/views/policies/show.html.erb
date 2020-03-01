@@ -1,0 +1,44 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Prime:</strong>
+  <%= @policy.prime %>
+</p>
+
+<p>
+  <strong>Start date:</strong>
+  <%= @policy.start_date %>
+</p>
+
+<p>
+  <strong>End date:</strong>
+  <%= @policy.end_date %>
+</p>
+
+<p>
+  <strong>Comision:</strong>
+  <%= @policy.comision %>
+</p>
+
+<p>
+  <strong>Payment type:</strong>
+  <%= @policy.payment_type %>
+</p>
+
+<p>
+  <strong>Product:</strong>
+  <%= @policy.product %>
+</p>
+
+<p>
+  <strong>Client:</strong>
+  <%= @policy.client %>
+</p>
+
+<p>
+  <strong>Sale executive:</strong>
+  <%= @policy.sale_executive %>
+</p>
+
+<%= link_to 'Edit', edit_policy_path(@policy) %> |
+<%= link_to 'Back', policies_path %>

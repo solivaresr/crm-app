@@ -1,0 +1,57 @@
+<%= form_with(model: policy, local: true) do |form| %>
+  <% if policy.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(policy.errors.count, "error") %> prohibited this policy from being saved:</h2>
+
+      <ul>
+      <% policy.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= form.label :prime %>
+    <%= form.text_field :prime %>
+  </div>
+
+  <div class="field">
+    <%= form.label :start_date %>
+    <%= form.date_select :start_date %>
+  </div>
+
+  <div class="field">
+    <%= form.label :end_date %>
+    <%= form.date_select :end_date %>
+  </div>
+
+  <div class="field">
+    <%= form.label :comision %>
+    <%= form.text_field :comision %>
+  </div>
+
+  <div class="field">
+    <%= form.label :payment_type %>
+    <%= form.text_field :payment_type %>
+  </div>
+
+  <div class="field">
+    <%= form.label :product_id %>
+    <%= form.text_field :product_id %>
+  </div>
+
+  <div class="field">
+    <%= form.label :client_id %>
+    <%= form.text_field :client_id %>
+  </div>
+
+  <div class="field">
+    <%= form.label :sale_executive_id %>
+    <%= form.text_field :sale_executive_id %>
+  </div>
+
+  <div class="actions">
+    <%= form.submit %>
+  </div>
+<% end %>

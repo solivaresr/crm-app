@@ -1,0 +1,19 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Name:</strong>
+  <%= @sale_executive.name %>
+</p>
+
+<p>
+  <strong>Email:</strong>
+  <%= @sale_executive.email %>
+</p>
+
+<p>
+  <strong>Password:</strong>
+  <%= @sale_executive.password %>
+</p>
+
+<%= link_to 'Edit', edit_sale_executive_path(@sale_executive) %> |
+<%= link_to 'Back', sale_executives_path %>

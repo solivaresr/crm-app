@@ -1,0 +1,31 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Sale Executives</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Name</th>
+      <th>Email</th>
+      <th>Password</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @sale_executives.each do |sale_executive| %>
+      <tr>
+        <td><%= sale_executive.name %></td>
+        <td><%= sale_executive.email %></td>
+        <td><%= sale_executive.password %></td>
+        <td><%= link_to 'Show', sale_executive %></td>
+        <td><%= link_to 'Edit', edit_sale_executive_path(sale_executive) %></td>
+        <td><%= link_to 'Destroy', sale_executive, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Sale Executive', new_sale_executive_path %>
