@@ -1,4 +1,7 @@
 Rails.application.routes.draw do
+  get 'sessions/login'
+  get 'sessions/logout'
+  get 'login/index'
   resources :policies
   resources :clients
   resources :comunes
